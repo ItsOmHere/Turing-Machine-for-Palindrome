@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turing Machine - Palindrome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Turing Machine Simulator</h1>
+        <p class="subtitle">Palindrome Detection</p>
+
+        <div class="panel">
+            <label for="inputString">Enter an input string:</label>
+            <input type="text" id="inputString"
+                   placeholder="Example: MADAM" value="MADAM"
+                   maxlength="30">
+
+            <div class="buttons">
+                <button onclick="startMachine()">Start</button>
+                <button onclick="nextStep()">Next Step</button>
+                <button onclick="runMachine()">Run</button>
+                <button onclick="resetMachine()">Reset</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Tape</h2>
+            <div id="tape" class="tape"></div>
+            <p id="headInfo">Tape Head: Ready</p>
+        </div>
+
+        <div class="panel">
+            <h2>Machine Status</h2>
+            <p id="stepInfo">Enter a string and click Start.</p>
+            <p id="result">Waiting for input...</p>
+        </div>
+
+        <div class="panel">
+            <h2>Algorithm Steps</h2>
+            <ol>
+                <li>Find the leftmost unmarked symbol.</li>
+                <li>Find the rightmost unmarked symbol.</li>
+                <li>Compare both symbols.</li>
+                <li>If they match, mark both symbols.</li>
+                <li>Return to the left and repeat.</li>
+                <li>Accept if all symbols match; otherwise reject.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
